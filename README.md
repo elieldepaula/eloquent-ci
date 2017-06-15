@@ -1,4 +1,4 @@
-# CodeIgniter - Eloquent
+# Eloquent CodeIgniter
 
 Este projeto contém uma implementação do CodeIgniter 3.1.4 com Eloquent 5.* ORM do Laravel.
 
