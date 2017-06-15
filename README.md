@@ -4,6 +4,10 @@ Este projeto contém uma implementação do CodeIgniter 3.1.4 com Eloquent 5.* O
 
 Existem várias bibliotecas de ORM muito boas mas o Eloquent é de longe a mais simples de integrar com o CodeIgniter.
 
+Você pode usar este repositório ou pode usar uma instalação nova do CodeIgniter, para isto você terá que usar o composer para instalar o Eloquent e copiar a classe Eloquent (/application/libraries/Eloquent.php) deste projeto no seu.
+
+Saiba mais sobre o CodeIgniter no [Site Oficial](http://codeigniter.com)
+
 ## Instalação
 
 A biblioteca deverá ser instalada usando o [composer](https://packagist.org/packages/illuminate/database):
@@ -16,7 +20,8 @@ A biblioteca deverá ser instalada usando o [composer](https://packagist.org/pac
 
 ## Cofiguração
 
-1- Certifique-se de ter adicionado a biblioteca Eloquent.php no autoload.
+1- Certifique-se de ter adicionado a biblioteca Eloquent.php à pasta /application/libraries do seu projeto e adicionado no autoload.php.
+
 ``$autoload['libraries'] = array('eloquent');``
 
 2- Configure os dados de acesso do banco de dados na biblioteca Eloquent.php.
