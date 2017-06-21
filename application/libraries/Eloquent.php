@@ -1,4 +1,4 @@
-<?php
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
@@ -12,16 +12,16 @@ class Eloquent
 
     function __construct()
     {
-
+        require_once APPPATH . 'config/database.php';
         $config['db'] = array(
-            'driver' => 'mysql',
-            'host' => 'localhost',
-            'database' => 'databasename',
-            'username' => 'root',
-            'password' => 'root',
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix' => ''
+            'driver'    => $db['default']['dbdriver'],
+            'host'      => $db['default']['hostname'],
+            'database'  => $db['default']['database'],
+            'username'  => $db['default']['username'],
+            'password'  => $db['default']['password'],
+            'charset'   => $db['default']['char_set'],
+            'collation' => $db['default']['dbcollat'],
+            'prefix'    => $db['default']['dbprefix']
         );
 
         $capsule = new Capsule;

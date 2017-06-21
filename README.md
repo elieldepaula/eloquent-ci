@@ -24,18 +24,29 @@ A biblioteca deverá ser instalada usando o [composer](https://packagist.org/pac
 
 ``$autoload['libraries'] = array('eloquent');``
 
-2- Configure os dados de acesso do banco de dados na biblioteca Eloquent.php.
+2- Configure os dados de acesso do banco de dados normalmente em /application/config/database.php.
 
 ```php
-$config['db'] = array(
-    'driver' => 'mysql',
-    'host' => 'localhost',
-    'database' => 'databasename',
-    'username' => 'root',
-    'password' => 'root',
-    'charset' => 'utf8',
-    'collation' => 'utf8_unicode_ci',
-    'prefix' => ''
+$db['default'] = array(
+	'dsn'	=> '',
+	'hostname' => 'localhost',
+	'username' => '',
+	'password' => '',
+	'database' => '',
+	'dbdriver' => 'mysql',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
 );
 ```
 
